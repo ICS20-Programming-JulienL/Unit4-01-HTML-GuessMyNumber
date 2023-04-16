@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- Unit4-01-HTML-GuessMyNumber -->
+<html lang="en-ca">
+  <head>
+    <!--Meta Data-->
+    <meta charset="utf-8">
+    <meta name="description" content="Random Number Guesser in JS">
+    <meta name="keywords" content="Immaculata, ics2o">
+    <meta name="author" content="Julien L.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- For the favico6n on this page -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav_index/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav_index/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav_index/favicon-16x16.png">
+    <link rel="manifest" href="./fav_index/site.webmanifest">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Google's MDL -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.purple-deep_purple.min.css"/>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <title>Random Number Guesser in JS</title>
+  </head>
+  <body>
+    <script src="./js/script.js"></script>
+    <!-- Google's MDL -->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    
+    <div class = "mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <!-- Web page header -->
+      <header class = "mdl-layout__header">
+        <div class = "mdl-layout__header-row">      
+          <span class = "mdl-layout-title">Random Number Guesser in JS</span>         
+        </div>       
+      </header>
+      <!--Input and Textfield code-->
+      <center>
+        <br>
+        <p>This program will pick a number from 1 to 6. If you guess the number correctly, you win, if not, you lose.</p>
+        <h3>Please enter the following:</h3>
+        <form action="javascript:guessNumber()">
+          <label for="user-number">Your guess:</label>
+          <input type="number" id="user-number" step="1" min="1" max="6" placeholder="Enter the temperature in fahrenheit"><br><br>
+        <!-- Accent-colored raised button -->
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent" onclick ="guessNumber()">
+          Guess
+        </button>
+        </form>
+        <!-- Create a space where the user information will be displayed -->
+        <div id="program-feedback">
+        </div>
+        <img src="./images/numbers.jpg" alt="Numbers image">
+        <!-- MDL Progress Bar with Indeterminate Progress -->
+        <div id="p2" class="mdl-progress mdl-js-progress mdl-progress__indeterminate"></div>
+      </center>
+    </div>
+  </body>
+</html>
